@@ -60,16 +60,20 @@ slider in the layer controls.
 ![](fig/builtin-histogram.png
 ){alt="Napari's built-in histogram, displayed inside the layer controls."}
 
-For this episode though, we will use one provided by a napari plugin for two 
-main reasons:
+For this episode though, we will use one provided by the `napari-matplotlib` 
+plugin. Remember from the [Imaging Software episode](imaging-software.md) 
+that plugins add new features to a piece of software. Napari has hundreds of 
+plugins available on the [napari hub](https://www.napari-hub.org/) website.
 
-- it will provide an example of how to install and use plugins
-- it supports some features like panning / zooming into the histogram that 
-aren't supported in napari yet
+:::::::::::::::::::::::::::::::::::::: callout
 
-Remember from the [Imaging Software episode](imaging-software.md) that plugins 
-add new features to a piece of software. Napari has hundreds of plugins 
-available on the [napari hub](https://www.napari-hub.org/) website.
+## Why don't we use napari's built-in histogram?
+
+- The matplotlib histogram supports some features like panning / zooming that 
+aren't supported in the napari histogram yet
+- We wanted to provide an example here of how to install and use plugins
+
+::::::::::::::::::::::::::::::::::::::
 
 Let's start by going to the napari hub and searching for 'matplotlib':
 
