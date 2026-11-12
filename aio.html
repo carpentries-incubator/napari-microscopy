@@ -1603,7 +1603,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-image-display"><p>Content from <a href="image-display.html">Image display</a></p>
 <hr>
-<p>Last updated on 2025-11-04 |
+<p>Last updated on 2026-11-12 |
 
         <a href="https://github.com/HealthBioscienceIDEAS/microscopy-novice/edit/main/episodes/image-display.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1662,10 +1662,32 @@ image looks.</p>
 hover over pixels in Napari, or print the array into Napari’s console
 (as we saw last episode), but these are hard to interpret at a glance. A
 much better option is to use an image histogram.</p>
-<p>To do this, we will have to install a new plugin for Napari. Remember
-from the <a href="imaging-software.html">Imaging Software episode</a>
-that plugins add new features to a piece of software. Napari has
-hundreds of plugins available on the <a href="https://www.napari-hub.org/" class="external-link">napari hub</a> website.</p>
+<p>Napari comes with a built-in histogram, which you can open by
+clicking the <img src="https://raw.githubusercontent.com/napari/napari/main/src/napari/resources/icons/histogram.svg" alt="Napari's histogram button" height="30" class="figure"> icon next to the
+contrast limits slider in the layer controls.</p>
+<figure><img src="fig/builtin-histogram.png" alt="Napari's built-in histogram, displayed inside the layer controls." class="figure mx-auto d-block"></figure><p>For this episode though, we will use one provided by the
+<code>napari-matplotlib</code> plugin. Remember from the <a href="imaging-software.html">Imaging Software episode</a> that plugins
+add new features to a piece of software. Napari has hundreds of plugins
+available on the <a href="https://www.napari-hub.org/" class="external-link">napari hub</a>
+website.</p>
+<div id="why-dont-we-use-naparis-built-in-histogram" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="why-dont-we-use-naparis-built-in-histogram" class="callout-inner">
+<h3 class="callout-title">Why don’t we use napari’s built-in
+histogram?</h3>
+<div class="callout-content">
+<ul>
+<li>The matplotlib histogram supports some features like panning /
+zooming that aren’t supported in the napari histogram yet</li>
+<li>We wanted to provide an example here of how to install and use
+plugins</li>
+</ul>
+</div>
+</div>
+</div>
 <p>Let’s start by going to the napari hub and searching for
 ‘matplotlib’:</p>
 <figure><img src="fig/napari-hub.png" alt="Screenshot of searching 'matplotlib' on napari hub" class="figure mx-auto d-block"></figure><p>You should see ‘napari Matplotlib’ appear in the list (if not, try
@@ -2278,7 +2300,7 @@ shown below:</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Pros and cons </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p><strong>Channels as separate layers</strong></p>
 <ol style="list-style-type: decimal">
@@ -2427,7 +2449,7 @@ large size.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="section">1<a class="anchor" aria-label="anchor" href="#section"></a>
@@ -2576,7 +2598,7 @@ manually set it to load as rgb:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>If you haven’t completed the <a href="image-display.html">image
 display episode</a>, you will need to <a href="image-display.html#napari-plugins">install the
@@ -2616,7 +2638,7 @@ produce? Each value has a minimum of 0 and a maximum of 255.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <figure><img src="fig/rgb-exercise.png" style="width:50.0%" alt="Diagram of (R, G, B) values next to corresponding  colours" class="figure mx-auto d-block"></figure>
 </div>
@@ -2876,7 +2898,7 @@ image’s pixel metadata: <code>metadata.images[0].pixels</code>)</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="microscope-manufacturer">Microscope manufacturer<a class="anchor" aria-label="anchor" href="#microscope-manufacturer"></a>
@@ -3057,7 +3079,7 @@ tall as their original size in the viewer</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="section">1<a class="anchor" aria-label="anchor" href="#section"></a>
@@ -3261,7 +3283,7 @@ do they differ? How does each compare to timepoint 30 of the original
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="file-sizes">File sizes<a class="anchor" aria-label="anchor" href="#file-sizes"></a>
@@ -4339,7 +4361,7 @@ you can share different ideas.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>There’s no one correct answer here, as it will depend on which type
 of light microscope you are using and which aspects of nucleus size and
@@ -4486,7 +4508,7 @@ magnification?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="x16-image">16x16 image<a class="anchor" aria-label="anchor" href="#x16-image"></a>
@@ -4636,7 +4658,7 @@ it?</p></li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="section level3">
 <h3 id="a">a<a class="anchor" aria-label="anchor" href="#a"></a>
@@ -7203,8 +7225,8 @@ any links that you are not going to use.
   "url": "https://HealthBioscienceIDEAS.github.io/microscopy-novice/aio.html",
   "identifier": "https://HealthBioscienceIDEAS.github.io/microscopy-novice/aio.html",
   "dateCreated": "2023-10-26",
-  "dateModified": "2026-11-10",
-  "datePublished": "2026-11-10"
+  "dateModified": "2026-11-12",
+  "datePublished": "2026-11-12"
 }
 
   </script><script>
